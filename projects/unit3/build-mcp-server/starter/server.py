@@ -86,7 +86,7 @@ async def analyze_file_changes(base_branch: str = "main", include_diff: bool = T
         }
         if include_diff:
             response["diff"] = diff_content
-            response["diff_truncated"] = truncated
+            response["diff_truncated"] =    
             response["diff_line_limit"] = max_diff_lines
         return json.dumps(response)
     except subprocess.CalledProcessError as e:
